@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Sacramento&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+    45deg,
+    rgba(34, 164, 116, 1) 0%,
+    rgba(41, 47, 143, 1) 100%
+  );
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 4.5rem;
+  background: #fff;
+  width: 80%;
+  margin: auto;
+  position: relative;
+  top: 200px;
+  border-radius: 5px;
+  box-shadow: 0 30px 30px rgb(0, 0, 0, 0.5);
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  width: 150px;
+}
+
+.logo h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 3.2rem;
+  color: rgba(41, 47, 143, 1);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  font-size: 1.2rem;
+}
+
+.nav-links li a {
+  color: #333;
+  position: relative;
+}
+
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(45deg, rgba(34, 164, 116, 1) 0%, #292f8f 100%);
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.nav-links li a.active {
+  background: linear-gradient(45deg, rgba(34, 164, 116, 1) 0%, #292f8f 100%);
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fff;
+}
